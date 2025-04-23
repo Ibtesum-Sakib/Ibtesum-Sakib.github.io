@@ -1,178 +1,1716 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="utf-8">
-    <title> Ibtesum's Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Template Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
+    <!--==================== FAVICON ====================-->
+    <link rel="icon" href="assets/img/favicon.png">
 
-    <!-- Template CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/preloader.min.css" rel="stylesheet">
-    <link href="css/circle.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <!-- CSS Skin File -->
-    <link href="css/skins/yellow.css" rel="stylesheet">
-    
-        <!-- Live Style Switcher - demo only -->
-    <link rel="alternate stylesheet" type="text/css" title="blue" href="css/skins/blue.css" />
-    <link rel="alternate stylesheet" type="text/css" title="green" href="css/skins/green.css" />
-    <link rel="alternate stylesheet" type="text/css" title="yellow" href="css/skins/yellow.css" />
-    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="css/skins/blueviolet.css" />
-    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="css/skins/goldenrod.css" />
-    <link rel="alternate stylesheet" type="text/css" title="magenta" href="css/skins/magenta.css" />
-    <link rel="alternate stylesheet" type="text/css" title="orange" href="css/skins/orange.css" />
-    <link rel="alternate stylesheet" type="text/css" title="purple" href="css/skins/purple.css" />
-    <link rel="alternate stylesheet" type="text/css" title="red" href="css/skins/red.css" />
-    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- Modernizr JS File -->
-    <script src="js/modernizr.custom.js"></script>
+    <!--    =========== Tracker =========      -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NYWM62ET3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2NYWM62ET3');
+    </script>
+    <title>Ibtesum Sakib Portfolio</title>
 </head>
 
-<body class="home">
-<!-- Live Style Switcher Starts - demo only -->
-<div id="switcher" class="">
-    <div class="content-switcher">
-        <h4>STYLE SWITCHER</h4>
-        <ul>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('purple');" title="purple" class="color"><img src="img/styleswitcher/purple.png" alt="purple"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('red');" title="red" class="color"><img src="img/styleswitcher/red.png" alt="red"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('blueviolet');" title="blueviolet" class="color"><img src="img/styleswitcher/blueviolet.png" alt="blueviolet"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('blue');" title="blue" class="color"><img src="img/styleswitcher/blue.png" alt="blue"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('goldenrod');" title="goldenrod" class="color"><img src="img/styleswitcher/goldenrod.png" alt="goldenrod"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('magenta');" title="magenta" class="color"><img src="img/styleswitcher/magenta.png" alt="magenta"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('yellowgreen');" title="yellowgreen" class="color"><img src="img/styleswitcher/yellowgreen.png" alt="yellowgreen"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('orange');" title="orange" class="color"><img src="img/styleswitcher/orange.png" alt="orange"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('green');" title="green" class="color"><img src="img/styleswitcher/green.png" alt="green"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('yellow');" title="yellow" class="color"><img src="img/styleswitcher/yellow.png" alt="yellow"/></a>
-            </li>
-        </ul>
-           <div id="hideSwitcher">&times;</div>
-    </div>
-</div>
-<div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
-<!-- Live Style Switcher Ends - demo only -->
-<!-- Header Starts -->
-<header class="header" id="navbar-collapse-toggle">
-    <!-- Fixed Navigation Starts -->
-    <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
-        <li class="icon-box active">
-            <i class="fa fa-home"></i>
-            <a href="index.html">
-                <h2>Home</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-user"></i>
-            <a href="about.html">
-                <h2>About</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-briefcase"></i>
-            <a href="portfolio.html">
-                <h2>Portfolio</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-envelope-open"></i>
-            <a href="contact.html">
-                <h2>Contact</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-comments"></i>
-            <a href="blog.html">
-                <h2>Blog</h2>
-            </a>
-        </li>
-    </ul>
-    <!-- Fixed Navigation Ends -->
-    <!-- Mobile Menu Starts -->
-    <nav role="navigation" class="d-block d-lg-none">
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul class="list-unstyled" id="menu">
-                <li class="active"><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
-                <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
-                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                <li><a href="blog.html"><i class="fa fa-comments"></i><span>Blog</span></a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Mobile Menu Ends -->
-</header>
-<!-- Header Ends -->
-<!-- Main Content Starts -->
-<section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
-    <div class="color-block d-none d-lg-block"></div>
-    <div class="row home-details-container align-items-center">
-        <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
-        <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
-            <div>
-                <img src="img/sakibdp.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
-                <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">hi there !</h6>
-                <h1 class="text-uppercase poppins-font"><span>I'm</span> Mohammad Ibtesum Sakib</h1>
-                <p class="open-sans-font">An explorer who is a data science student and Computer Science graduate looking to expand his knowledge of the data field. 
-                    I recently completed my master's seminar titled "Leveraging AI and Transformer Models for Depression Detection and Behavioral Insights in
-                    Social Media"(Note-2.00) at TU Dortmund. I wrote my bachelor thesis titled "Real-Time Speech-to-Speech Translation from Bengali to English with BLEU 48.98 (Grade: 1.3)".
-                    Former Research Assistant in the Economic Research Group (ERG), where I was responsible for data analysis and predictive modeling. 
-                    My research focuses on machine learning combined with natural language processing (NLP), text analytics, artificial intelligence, and data science. 
-                    Now I am diving deeper into Data Analysis and Statistics</p>
-                <a href="about.html" class="btn btn-about">more about me</a>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">ibtesumSakib</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> Portfolio
+                        </a>
+                    </li>
+                
+                    <li class="nav__item">
+                        <a href="#certification" class="nav__link">
+                            <i class="uil uil-newspaper nav__icon"></i> Certifications
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link">
+                            <i class="uil uil-edit nav__icon"></i> Blog
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/ibtesum" target="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+
+                        <a href="https://www.github.com/Ibtesum-Sakib" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+
+                        <a href="https://www.medium.com/@ibtesum38" target="_blank" class="home__social-icon">
+                            <i class="uil uil-medium-m"></i>
+                        </a>
+
+                        <!-- Personal Blog Link -->
+                        <!-- <a href="https://newstoday51.news.blog/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-pen"></i>
+                            </a> -->
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+
+                                <image class="home__blob-img" x="20" y="10"
+                                    xlink:href="assets/img/About/sakibsdp.png" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I'm Sakib</h1>
+                        <h3 class="home__subtitle">Data Science Graduate Student @ TU Dortmund</h3>
+                        <p class="home__description"> Data science enthusiast with Computer Science and Engineering background, focused on NLP and AI.
+                        </p>
+                        <a href="#contact" class="button button--flex">
+                            Contact Me <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll Down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My Introduction</span>
+
+            <div class="about__container container grid">
+                <img src="assets/img/About/sakibdp.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <p class="about__description">
+                        Data science Graduate student with a Computer Science background, 
+                        passionate about uncovering insights through AI and machine learning. 
+                        Recently completed a master’s seminar at TU Dortmund on <b>leveraging transformer models for depression detection and behavioral analysis in social media</b> (Grade: 2.0). 
+                        My bachelor thesis focused on <b>real-time speech translation from Bengali to English</b>, achieving a BLEU score of 48.98 (Grade: 1.3). As a former Research Assistant at the Economic Research Group (ERG), I worked on data analysis and developed predictive models. I found my interest in data, NLP, AI, and text analytics—
+                        now diving deeper into statistics and data analysis to broaden my expertise.
+                    </p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">9</span>
+                            <span class="about__info-name">Data Projects <br> Completed</span>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">2</span>
+                            <span class="about__info-name">Articles <br> Written</span>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">2</span>
+                            <span class="about__info-name">Ongoing <br> Projects</span>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <a download="" href="assets/pdf/Ibtesum+Sakib+Resume.pdf" class="button button--flex resume">
+                            Download Resume<i class="uil uil-download-alt button__icon"></i>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My Technical Level</span>
+
+            <div class="skills__container container grid">
+                <div>
+                    <!--==================== SKILLS 1====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Development</h1>
+                                <span class="skills__subtitle">All About the Core</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__python">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">SQL</h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__sql">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">MS Excel</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__excel">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__js">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">R</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__r">
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Android</h3>
+                                    <span class="skills__number">40%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__android">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Julia</h3>
+                                        <span class="skills__number">20%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__julia">
+                                        </span>
+                                    </div>
+                                </div> 
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Photoshop</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__photoshop">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Indesign</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__indesign">
+                                    </span>
+                                </div>
+                            </div>-->
+                            
+
+                        </div>
+                    </div>
+
+                    <!--==================== SKILLS 2====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-server-network skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Frameworks</h1>
+                                <span class="skills__subtitle">Everyone Needs Support</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">NumPy</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__np">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">pandas</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__pd">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">scikit-learn</h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__sklearn">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Pytorch</h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__pytorch">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">streamlit</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__streamlit">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">matplotlib</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__mtl">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">seaborn</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__seaborn">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">OpenCV</h3>
+                                    <span class="skills__number">65%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__opencv">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">NLTK</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__nltk">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Flask</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__flask">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 3====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-atom skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Machine Learning</h1>
+                                <span class="skills__subtitle">Theory, theory!</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Ensemble Models</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__ensemble">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Exploratory Data Analysis</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__eda">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Natural Language Processing</h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__nlp">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Linear and Logistic Regression</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__regression">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Decision Trees</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__dt">
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Convolutional Neural Networks</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__cnn">
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Recommender Systems</h3>
+                                    <span class="skills__number">75%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__recsys">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Clustering</h3>
+                                    <span class="skills__number">65%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__clustering">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Graph Neural Networks</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__gnn">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Multi-modal Learning</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__mml">
+                                    </span>
+                                </div>
+                            </div>
+
+                           <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Time Series</h3>
+                                    <span class="skills__number">20%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__time">
+                                    </span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!--==================== SKILLS 4====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-cloud-lock skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Cloud and Engineering</h1>
+                                <span class="skills__subtitle">Fly Fast & High!</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Docker</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__docker">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">AWS EC2</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__ec2">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">AWS ECR</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__ecr">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Big Query</h3>
+                                    <span class="skills__number">40%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__bq">
+                                    </span>
+                                </div>
+                            </div> -->
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Azure</h3>
+                                    <span class="skills__number">40%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__azure">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 5====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-analysis skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Databases and Viz</h1>
+                                <span class="skills__subtitle">Wow! Factor</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">MySQL</h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__sql">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Tableau</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__tableau">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Power BI</h3>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__pbi">
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My Personal Journey</span>
+
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex" data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        Education
+                    </div>
+
+                    <div class="qualification__button button--flex qualification__active" data-target="#work">
+                        <i class="uil uil-briefcase-alt qualification__icon"></i>
+                        Work
+                    </div>
+                </div>
+
+                <div class="qualification__sections">
+                    <!--==================== QUALIFICATION CONTENT 1 ====================-->
+
+                    <div class="qualification__content" data-content id="education">
+
+                        <!--==================== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Masters of Science in Data Science</h3>
+                                <span class="qualification__subtitle">Technical University of Dortmund, Dortmund, Germany</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2023-2026
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <!--==================== QUALIFICATION 2 ====================-->
+                        <div class="qualification__data">
+
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Exchange - Data Science (ongoing)</h3>
+                                <span class="qualification__subtitle">Ruhr University of Bochum, Bochum, Germany</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2025
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== QUALIFICATION 3 ====================-->
+                        <div class="qualification__data">
+
+
+                            <div>
+                                <h3 class="qualification__title">B.Sc. in Computer Science & Engineering</h3>
+                                <span class="qualification__subtitle">North South University, Dhaka, Bangladesh</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2017-2021
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                        </div>
+
+                        <!--==================== QUALIFICATION 4 ====================-->
+                        <div class="qualification__data">
+
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Higher Secondary in Science</h3>
+                                <span class="qualification__subtitle">Chattogram, Bangladesh</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2014-2016
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+
+                    <!--==================== QUALIFICATION CONTENT 2 ====================-->
+
+                    <div class="qualification__content qualification__active" data-content id="work">
+
+                        <!--==================== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Research Assistant</h3>
+                                <span class="qualification__subtitle">Economic Research Group </span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Sep 2021 - Mar 2022
+                                </div>
+
+                                <span
+                                    class="button button--flex button--small button--link qualification__button-modal">
+                                    What I did here
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </span>
+
+                                <div class="qualification__modal">
+                                    <div class="qualification__modal-content">
+                                        <!-- <h4 class="qualification__modal-title"></h4> -->
+                                        <p style="text-align:center"><img src="assets/img/Experience/ERG-logo.jpg"
+                                                alt=""></p>
+                                        <i class="uil uil-times qualification__modal-close"></i>
+
+                                        <ul class="qualification__modal-works grid">
+                                            <li class="qualification__modal-work">
+                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                                <p>Conducted comprehensive data analysis using Python to support economic research projects.</p>
+                                            </li>
+                                            <li class="qualification__modal-work">
+                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                                <p>Utilized MLflow to develop end-to-end predictive modeling suite, improving forecasting accuracy by 15%.</p>
+                                            </li>
+                                            <li class="qualification__modal-work">
+                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                                <p>Led the implementation of ML workflows, reducing policy recommendation processing time by 2 days.</p>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                        </div>
+
+                        <!--==================== QUALIFICATION 2 ====================-->
+                        <div class="qualification__data">
+
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Research Assistant</h3>
+                                <span class="qualification__subtitle">North South University</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    May 2021 - Mar 2022
+                                </div>
+
+                                <span
+                                    class="button button--flex button--small button--link qualification__button-modal">
+                                    What I did here
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </span>
+
+                                <div class="qualification__modal">
+                                    <div class="qualification__modal-content">
+                                        <!-- <h4 class="qualification__modal-title"></h4> -->
+                                        <p style="text-align:center"><img src="assets/img/Experience/nsu-logo-small.png" alt="">
+                                        </p>
+                                        <i class="uil uil-times qualification__modal-close"></i>
+
+                                        <ul class="qualification__modal-works grid">
+                                            <li class="qualification__modal-work">
+                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                                <p>Co-developed real-time speech translation system achieving BLEU score of 48.98 using Transformer architecture.</p>
+                                            </li>
+                                            <li class="qualification__modal-work">
+                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                                <p>Executed data preprocessing, model training, and hyperparameter optimization for NLP system.</p>
+                                            </li>
+                                            </p>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                      
+
+                        <!--==================== QUALIFICATION 5 ====================-->
+                        <!-- <div class="qualification__data">
+
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+
+                                <div>
+                                    <h3 class="qualification__title">Freelance Android Developer</h3>
+                                    <span class="qualification__subtitle"></span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        
+                                    </div>
+                                    <span
+                                        class="button button--flex button--small button--link qualification__button-modal">
+                                        What I did here
+                                        <i class="uil uil-arrow-right button__icon"></i>
+                                    </span>
+                                </div>
+
+                                <div class="qualification__modal">
+                                    <div class="qualification__modal-content">
+                                         <h4 class="qualification__modal-title"></h4>
+                                       <p style="text-align:center"><img src="assets/img/Experience/Iplit.png" alt="">
+                                        </p>
+                                        <i class="uil uil-times qualification__modal-close"></i>
+
+                                        <ul class="qualification__modal-works grid">
+                                            <li class="qualification__modal-work">
+                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                                <p>Developed and deployed an Android application for handsfree token
+                                                    printing for use in hospitals and clinics</p>
+                                            </li>
+                                            <li class="qualification__modal-work">
+                                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                                <p>Currently in use in two hospitals across the city</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                    
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle">My Projects</span>
+
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+
+                    <!--==================== PORTFOLIO 1====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio9.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Bayesian Approach For Smoking Prediction</h3>
+                            <h4 class="portfolio__subtitle">Bayesian Data Analysis</h4>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Address the prediction of smoking behavior using individual-level factors (age, gender, income) and regional variation. </p>
+                            </li>
+                            
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Age was negatively correlated with smoking — young individuals were more likely to smoke.</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Income was nonlinear in trend — both the top and bottom income groups had high smoking prevalence. 
+                                    Education mattered — but its influence varied significantly by regions. </p>
+                            </li>
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/rstudio.png">
+                                <img src="assets/img/Tech/r.png">
+                                <img src="assets/img/Tech/brms.png">
+                            </div><br>
+
+                            <h4 class="portfolio__subtitle">Research Papers Referred</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <a class="portfolio__links" href="https://doi.org/10.18637/jss.v080.i01">
+                                    <h6> Bürkner, P.-C. (2017). brms: An R package for Bayesian multilevel models using Stan. </h6>
+                                </a>
+                                <a class="portfolio__links" href="https://CRAN.R-project.org/package=loo">
+                                    <h6>Loo: Efficient leave-one-out cross-validation and waic for bayesian models. </h6>
+                                </a>
+                                <a class="portfolio__links" href="https://mc-stan.org/">
+                                    <h6>  R interface to Stan </h6>
+                                </a>
+                                <a class="portfolio__links" href="https://arxiv.org/abs/2204.09730">
+                                    <h6> Transformer Decoders with MultiModal Regularization for Cross-Modal Food
+                                        Retrieval </h6>
+                                </a>
+                                <a class="portfolio__links" href="https://link.springer.com/book/10.1007/978-3-662-67526-7">
+                                    <h6> R: A language and environment for statistical computing </h6>
+                                </a>
+                            </div>
+
+                            <a href="https://github.com/Ibtesum-Sakib/Bayesian-Approach-For-Smoking-Prediction-"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+
+                            <a href="https://github.com/Ibtesum-Sakib/Bayesian-Approach-For-Smoking-Prediction-/blob/main/Group46_report.pdf"
+                                class="button button--flex button--small portfolio__button">
+                                View Report
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                    <!--==================== PORTFOLIO 11====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio1.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Pneumonia Detection Classification with MLFLOW DVC and CI/CD</h3>
+                            <h4 class="portfolio__subtitle">🧠 MLOps (Machine Learning Operations)</h4>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Utilized Continuous Integration/Continuous Deployment (CI/CD) workflows to automate model tracking, versioning, and deployment on AWS using EC2 and ECR.</p>
+                            </li>
+
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/tensorflow.png">
+                                <img src="assets/img/Tech/python.png">
+                                <img src="assets/img/Tech/aws.png">
+                                <img src="assets/img/Tech/mlflow-black.svg">
+                            </div><br>
+
+                            
+
+                            <a href="https://github.com/Ibtesum-Sakib/Pneumonia-DC-MLFLOW-DVC"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!--==================== PORTFOLIO 3====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio3.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Kidney Diseases Classification MLFLOW DVC</h3>
+                            <h4 class="portfolio__subtitle">Computer Vision</h4>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Utilized Continuous Integration/Continuous Deployment (CI/CD) workflows to automate model tracking, versioning, and deployment on AWS using EC2 and ECR. </p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Cut down manual intervention by 40% with the integration of Docker and self-hosted runners for continuous deployment. 
+                                Enhanced experiment tracking efficiency by 25% using MLFLOW for logging and managing model metadata.</p>
+                            </li>
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/tensorflow.png">
+                                <img src="assets/img/Tech/python.png">
+                                <img src="assets/img/Tech/mlflow-black.svg">
+                            </div><br>
+
+                            <a href="https://github.com/Ibtesum-Sakib/Kidney-Diseases-Classification-MLFLOW"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+         
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 4====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio4.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">End To End Resume ATS Tracking LLM Project With Google Gemini Pro</h3>
+                            <h4 class="portfolio__subtitle">Natural Language Processing (NLP)</h4>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Developed and implemented an end-to-end ATS resume scanning system using LLMs, 
+                                    incorporating Google Gemini Pro.
+                                    Optimized tracking and filtering for enhanced candidate screening, improving accuracy and efficiency in the hiring process.</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Deployed online via Streamlit
+                                </p>
+                            </li>
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/pytorch.png">
+                                <img src="assets/img/Tech/python.png">
+                                <img src="assets/img/Tech/gemini.png">
+                                <img src="assets/img/Tech/streamlit.png">
+                            </div>
+
+                            <a href="https://github.com/Ibtesum-Sakib/ATS-Resume-Scan"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 5====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio5.jpeg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">HR Analytics</h3>
+                            <h4 class="portfolio__subtitle">Data Science</h4>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Developed a dashboard in Power BI to analyze three months attendance data of AtliQ Company for HR manager.</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>With an accuracy of approximately 94.04% in April, AtliQ outperforms the other three months.</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Approximately 93.21% of Mondays are the most active for AtliQ to enable them to hold their Monday meetings.</p>
+                            </li>
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/powerBI.png">
+                                <img src="assets/img/Tech/excel.png">
+                            </div>
+
+                            <a href="https://github.com/Ibtesum-Sakib/HR_Analytics"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 6====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio6.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Messenger Chat Analyser</h3>
+                            <h4 class="portfolio__subtitle">Exploratory Data Analysis & NLP</h4>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>The foundation of this app is made up of very basic data analysis, 
+                                    like adding up the times of day that messages were sent or counting the number of messages sent each month.</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Implemented Sentiment Analysis</p>
+                            </li>
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/python.png">
+                                <img src="assets/img/Tech/numpy.png">
+                                <img src="assets/img/Tech/pandas.png">
+                                <img src="assets/img/Tech/matplotlib.png">
+                                <img src="assets/img/Tech/streamlit.png">
+                            </div>
+
+                            <a href="https://github.com/Ibtesum-Sakib/messenger-chat-analyser"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 7====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio2.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Speech Recognition with python and Goolgle cloud api</h3>
+                            <h4 class="portfolio__subtitle">Natural Language Processing</h4>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Speech Recognition From Bengali audio to text. </p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>It's a part of Senior Design project in North South University.</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Improved the performance of the application by implementing the transformer architecture
+                                    as a machine translation (BLEU 48.98) model that gives a real time translation.
+                                </p>
+                            </li>
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/python.png">
+                                <img src="assets/img/Tech/cloud-logo.svg">
+                            </div>
+
+                            <h4 class="portfolio__subtitle">Research Papers Referred</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <a class="portfolio__links" href="https://en.wikipedia.org/wiki/Speech_recognition">
+                                    <h6> Speech Recognition</h6>
+                                </a>
+                                <a class="portfolio__links" href="https://docs.python.org/2/library/difflib.html">
+                                    <h6> Python Accuracy difflib</h6>
+                                </a>
+                            </div>
+
+                            <a href="https://github.com/Ibtesum-Sakib/Speech-Recognition-with-python-and-Goolgle-cloud-api"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 8====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio7.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">COVID-19 Spread Forcasting in Bangladesh on weekly and monthly basis.</h3>
+                            <h4 class="portfolio__subtitle">Data Science (Machine Learning - Time Series Forecasting)</h4>
+
+                            <li class="qualification__modal-work portfolio__description" style="font-size: medium;">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Prophet is a procedure for forecasting time series data based on 
+                                    an additive model where non-linear trends are fit with yearly, weekly, 
+                                    and daily seasonality, plus holiday effects.</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description" style="font-size: medium;">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Prophet paper: Sean J. Taylor, Benjamin Letham (2018) Forecasting at scale. 
+                                    The American Statistician 72(1):37-45
+                                    <a
+                                    href="https://peerj.com/preprints/3190.pdf">this paper</a></p>
+                            </li>
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/python.png">
+                                <img src="assets/img/Tech/pandas.png">
+                                <img src="assets/img/Tech/matplotlib.png">
+                                <img src="assets/img/Tech/numpy.png">
+                                <img src="assets/img/Tech/seaborn.jpg">
+                                <img src="assets/img/Tech/prophet.png">
+                            </div>
+
+                            <a href="https://github.com/Ibtesum-Sakib/Covid-Forecast-For-Bangladesh-on-a-Weekly-and-Monthly-Basis"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 10====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Portfolio/portfolio8.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Portfolio App</h3>
+                            <h4 class="portfolio__subtitle">Android Development</h4>
+
+                            <li class="qualification__modal-work portfolio__description" style="font-size: medium;">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>Developed an Android application that acts as a portfolio of myself</p>
+                            </li>
+
+                            <li class="qualification__modal-work portfolio__description" style="font-size: medium;">
+                                <i class="uil uil-check-circle qualification__modal-icon"></i>
+                                <p>It's a fun project to develop my skills.</p>
+                            </li>
+
+                            <h4 class="portfolio__subtitle">Tech Stack</h4>
+
+                            <div class="portfolio_tech_icons">
+                                <img src="assets/img/Tech/android.png">
+                                <img src="assets/img/Tech/java.png">
+                            </div>
+
+                            <a href="https://github.com/Ibtesum-Sakib/Portfolio-App"
+                                class="button button--flex button--small portfolio__button">
+                                View Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+
+        <!--==================== CERTIFICATIONS ====================-->
+        <section class="certification section" id="certification">
+            <h2 class="section__title">Certifications</h2>
+            <span class="section__subtitle">Extra Courses I have Undertaken</span>
+
+            <div class="certification__container container grid">
+
+                
+                <!--==================== CERTIFICATION 1 ====================-->
+                <div class="certification__content">
+                    <div>
+                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
+                        <p style="text-align: center;"><img src="assets/img/Certifications/RE1Mu3b.png"></p>
+                        <h4 class="certification__title">C# Fundamentals for absolute beginners</h4>
+                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
+                    </div>
+
+                    <a class="button button--flex button--small button--link certification__button"
+                        href="https://drive.google.com/file/d/1QV7xs54HTPf13Updpk0bTAr350Wxk5Ud/view?usp=sharing">
+                        View Certificate
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+
+                <!--==================== CERTIFICATION 2 ====================-->
+                <div class="certification__content">
+                    <div>
+                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
+                        <p style="text-align: center;"><img src="assets/img/Certifications/coursera.png"></p>
+                        <h4 class="certification__title">Create Your First Web App with Python and Flask</h4>
+                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
+                    </div>
+
+                    <a class="button button--flex button--small button--link certification__button"
+                        href="https://www.coursera.org/account/accomplishments/verify/68HDDB2TTGTE">
+                        View Certificate
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+
+                <!--==================== CERTIFICATION 3 ====================-->
+                <div class="certification__content">
+                    <div>
+                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
+                        <p style="text-align: center;"><img src="assets/img/Certifications/coursera.png"></p>
+                        <h4 class="certification__title">Natural Language Processing with Attention Models</h4>
+                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
+                    </div>
+
+                    <a class="button button--flex button--small button--link certification__button"
+                        href="https://www.coursera.org/account/accomplishments/verify/89Y2PBT69XVG">
+                        View Certificate
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+
+                <!--==================== CERTIFICATION 4 ====================-->
+                <div class="certification__content">
+                    <div>
+                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
+                        <p style="text-align: center;"><img src="assets/img/Certifications/coursera.png"></p>
+                        <h4 class="certification__title">Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</h4>
+                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
+                    </div>
+
+                    <a class="button button--flex button--small button--link certification__button"
+                        href="https://www.coursera.org/account/accomplishments/verify/EHNRX4X6XBFJ">
+                        View Certificate
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+
+                <!--==================== CERTIFICATION 5 ====================-->
+                <div class="certification__content">
+                    <div>
+                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
+                        <p style="text-align: center;"><img src="assets/img/Certifications/coursera.png"></p>
+                        <h4 class="certification__title">Neural Networks and Deep Learning</h4>
+                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
+                    </div>
+
+                    <a class="button button--flex button--small button--link certification__button"
+                        href="https://coursera.org/share/adc3a26b0bd63690883fa0d96f3b1f88">
+                        View Certificate
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+
+                <!--==================== CERTIFICATION 6 ====================-->
+                <div class="certification__content">
+                    <div>
+                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
+                        <p style="text-align: center;"><img src="assets/img/Certifications/coursera.png"></p>
+                        <h4 class="certification__title">Structuring Machine Learning Projects</h4>
+                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
+                    </div>
+
+                    <a class="button button--flex button--small button--link certification__button"
+                        href="https://coursera.org/verify/TGDSQS2YZDXF">
+                        View Certificate
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+
+                <!--==================== CERTIFICATION 7 ====================-->
+                <div class="certification__content">
+                    <div>
+                        <!-- <i class="uil uil-web-grid research__icon"></i> -->
+                        <p style="text-align: center;"><img src="assets/img/Certifications/macquarie_university_logo.jpeg"></p>
+                        <h4 class="certification__title">Artificial Intelligence </h4>
+                        <h4 class="certification__subtitle">Expiry Date: Does not expire</h4>
+                    </div>
+
+                    <a class="button button--flex button--small button--link certification__button"
+                        href="https://drive.google.com/file/d/1xwWnTzjTg7MwykOZFgN6wpOedMsnvi6V/view?usp=sharing">
+                        View Certificate
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--==================== BLOG ====================-->
+        <section class="blog section" id="blog">
+            <h2 class="section__title">Blog</h2>
+            <span class="section__subtitle">My Technical Articles </span>
+
+            <div class="blog__container container swiper-container">
+                <div class="swiper-wrapper">
+
+
+                    <!--==================== BLOG 1====================-->
+                    <div class="blog__content grid swiper-slide">
+                        <img src="assets/img/Blog/blog1.png" alt="" class="blog__img">
+
+                        <div class="blog__data">
+                            <h3 class="blog__title">Can a Bayesian Model Predict Who Smokes?</h3>
+                            <p class="blog__description">Using Probabilistic Thinking to Decode Health Behaviors.</p>
+                            <p class="blog__description">Smoking remains a significant global public health problem, and more insight into the demographic and socioeconomic determinants that influence smoking status is required to design effective, targeted interventions.</p>
+                            <a href="https://medium.com/@ibtesum38/can-a-bayesian-model-predict-who-smokes-6b27cebd00f9"
+                                class="button button--flex button--small portfolio__button">
+                                Read it!
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!--==================== BLOG 2====================-->
+                    <div class="blog__content grid swiper-slide">
+                        <img src="assets/img/Blog/blog2.png" alt="" class="blog__img">
+
+                        <div class="blog__data">
+                            <h3 class="blog__title">Can AI Decode Silent Cries for Help?
+                                Transformers vs. Machine Learning in the Race to Detect Depression</h3>
+                            <p class="blog__description">🌐”I don’t want to live anymore.”<br>
+                                🌐 ”I’ve been feeling empty for weeks.”<br>
+                                🌐 ”Why does everything hurt?”<br>
+                                
+                                These aren’t just social media posts — they’re <b>digital SOS signals</b>  from 280 million people battling depression worldwide. 
+                                As suicide claims <b>700,000 lives</b> annually, researchers are deploying AI as a linguistic lifeguard. 
+                                But which approach dives deeper: transformer models or traditional machine learning? 
+                                Let’s dissect two groundbreaking studies reshaping mental health tech.</p>
+
+                            <a href="https://medium.com/@ibtesum38/can-ai-decode-silent-cries-for-help-transformers-vs-machine-learning-in-depression-detection-5e1573adf7c4"
+                                class="button button--flex button--small portfolio__button">
+                                Read it!
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!--==================== BLOG 3====================-->
+                    <div class="blog__content grid swiper-slide">
+                        <img src="assets/img/Blog/blog3.jpg" alt="" class="blog__img">
+
+                        <div class="blog__data">
+                            <h3 class="blog__title">A Concept of DVC and MLFLOW</h3>
+                            <p class="blog__description">Coming Soon</p>
+
+                            <a href=""
+                                class="button button--flex button--small portfolio__button">
+                                Read it!
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in Touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Call Me</h3>
+                            <span class="contact__subtitle">+49 176 634877 67</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <a href="mailto: ibtesum38@gmail.com">
+                                <h3 class="contact__title">Email</h3>
+                            </a>
+                            <a href="mailto: ibtesum38@gmail.com"><span
+                                    class="contact__subtitle">ibtesum38@gmail.com</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">Dortmund, Germany</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Ibtesum</h1>
+                    <span class="footer__subtitle">Data Science Enthusiastic</span> 
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#skills" class="footer__link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#research" class="footer__link">Research</a>
+                    </li>
+                    <li>
+                        <a href="#certification" class="footer__link">Certifications</a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="footer__link">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/ibtesum" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+
+                    <a href="https://www.github.com/Ibtesum-Sakib" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+
+                    <a href="https://www.medium.com/@ibtesum38" target="_blank" class="footer__social">
+                        <i class="uil uil-medium-m"></i>
+                    </a>
+
+                    <a href="https://ibtesum-sakib.github.io/" target="_blank" class="footer__social">
+                        <i class="uil uil-web-grid"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2025 Mohammad Ibtesum Sakib. All rights reserved</p>
         </div>
-    </div>
-</section>
-<!-- Main Content Ends -->
+    </footer>
 
-<script src="js/jquery-3.5.0.min.js"></script>
-<script src="js/styleswitcher.js"></script>
-<script src="js/preloader.min.js"></script>
-<script src="js/fm.revealator.jquery.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/cbpGridGallery.js"></script>
-<script src="js/jquery.hoverdir.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom.js"></script>
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
