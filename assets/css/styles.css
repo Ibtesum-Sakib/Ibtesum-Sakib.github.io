@@ -1052,54 +1052,9 @@ img{
     transform: translateX(.25rem)
 }
 
-/*==================== CO-CURRICULAR IMAGES SIDE BY SIDE ====================*/
-.cocurricular__photo-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
+/*==================== CO-CURRICULAR PHOTOS - MAINTAIN CURRENT SIZE WITH TOUCH HOVER ====================*/
 
-/* Method 1: Fixed aspect ratio with object-fit (Recommended) */
-.cocurricular__photo-container img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.cocurricular__photo-container img:hover {
-    transform: scale(1.05);
-}
-
-/* Method 2: CSS Grid with aspect-ratio (Modern browsers) */
-.cocurricular__photo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 20px 0;
-    justify-items: center;
-}
-
-.cocurricular__photo-grid img {
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 3/2; /* Width:Height ratio - adjust as needed */
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.cocurricular__photo-grid img:hover {
-    transform: scale(1.05);
-}
-
-/* Method 3: Container-based aspect ratio (Best browser support) */
+/* Main photo wrapper - keeps current layout */
 .cocurricular__photo-wrapper {
     display: flex;
     gap: 20px;
@@ -1111,17 +1066,21 @@ img{
 .cocurricular__photo-item {
     flex: 1;
     max-width: 300px;
+    min-width: 250px;
     position: relative;
-    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    z-index: 1;
 }
 
+/* Maintain current aspect ratio */
 .cocurricular__photo-item::before {
     content: '';
     display: block;
-    padding-bottom: 66.67%; /* 3:2 aspect ratio (adjust as needed) */
+    padding-bottom: 66.67%; /* 3:2 aspect ratio */
 }
 
 .cocurricular__photo-item img {
@@ -1131,22 +1090,191 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    transition: all 0.4s ease;
 }
 
-.cocurricular__photo-item:hover {
-    transform: scale(1.05);
+/* Hover effects for desktop */
+@media (hover: hover) and (pointer: fine) {
+    .cocurricular__photo-item:hover {
+        transform: scale(1.2);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        z-index: 10;
+        border-radius: 12px;
+    }
+
+    .cocurricular__photo-item:hover img {
+        transform: scale(1.1);
+    }
 }
 
-/* Responsive design for co-curricular images */
+/* Touch effects for mobile devices */
+@media (hover: none) and (pointer: coarse) {
+    .cocurricular__photo-item:active {
+        transform: scale(1.15);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        z-index: 10;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+    }
+
+    .cocurricular__photo-item:active img {
+        transform: scale(1.05);
+        transition: all 0.2s ease;
+    }
+}
+
+/* Container method - maintains current sizing */
+.cocurricular__photo-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.cocurricular__photo-container img {
+    width: 300px;
+    height: 200px; /* Fixed 3:2 ratio - same as current */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* Desktop hover for container method */
+@media (hover: hover) and (pointer: fine) {
+    .cocurricular__photo-container img:hover {
+        transform: scale(1.3);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        z-index: 10;
+        border-radius: 12px;
+    }
+}
+
+/* Touch effects for container method */
+@media (hover: none) and (pointer: coarse) {
+    .cocurricular__photo-container img:active {
+        transform: scale(1.2);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        z-index: 10;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+    }
+}
+
+/* Grid method with consistent sizing */
+.cocurricular__photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+    justify-items: center;
+}
+
+.cocurricular__photo-grid img {
+    width: 300px;
+    height: 200px; /* Consistent with current sizing */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* Desktop hover for grid method */
+@media (hover: hover) and (pointer: fine) {
+    .cocurricular__photo-grid img:hover {
+        transform: scale(1.25) translateY(-10px);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+        z-index: 10;
+        border-radius: 12px;
+    }
+}
+
+/* Touch effects for grid method */
+@media (hover: none) and (pointer: coarse) {
+    .cocurricular__photo-grid img:active {
+        transform: scale(1.15) translateY(-5px);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+        z-index: 10;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+    }
+}
+
+/* Glow effect method with current sizing */
+.cocurricular__photo-glow {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.cocurricular__photo-glow img {
+    width: 300px;
+    height: 200px; /* Same dimensions as current */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* Desktop hover for glow method */
+@media (hover: hover) and (pointer: fine) {
+    .cocurricular__photo-glow img:hover {
+        transform: scale(1.25);
+        box-shadow: 
+            0 0 30px rgba(var(--first-color), 0.3),
+            0 12px 24px rgba(0,0,0,0.2);
+        z-index: 10;
+        border-radius: 12px;
+        filter: brightness(1.1);
+    }
+}
+
+/* Touch effects for glow method */
+@media (hover: none) and (pointer: coarse) {
+    .cocurricular__photo-glow img:active {
+        transform: scale(1.2);
+        box-shadow: 
+            0 0 25px rgba(var(--first-color), 0.3),
+            0 12px 24px rgba(0,0,0,0.2);
+        z-index: 10;
+        border-radius: 12px;
+        filter: brightness(1.1);
+        transition: all 0.2s ease;
+    }
+}
+
+/* Responsive design */
 @media screen and (max-width: 768px) {
-    .cocurricular__photo-container {
+    .cocurricular__photo-container,
+    .cocurricular__photo-wrapper {
         flex-direction: column;
+        align-items: center;
     }
     
-    .cocurricular__photo-container img {
+    .cocurricular__photo-container img,
+    .cocurricular__photo-glow img {
         width: 100%;
         max-width: 400px;
-        height: 267px; /* Maintain 3:2 ratio */
+        height: 267px; /* Maintain 3:2 ratio on mobile */
         margin-bottom: 15px;
     }
     
@@ -1155,15 +1283,40 @@ img{
         gap: 15px;
     }
     
-    .cocurricular__photo-wrapper {
-        flex-direction: column;
-        align-items: center;
+    .cocurricular__photo-grid img {
+        width: 100%;
+        max-width: 400px;
+        height: 267px; /* Maintain 3:2 ratio */
     }
     
     .cocurricular__photo-item {
         max-width: 400px;
         width: 100%;
         margin-bottom: 15px;
+        min-width: auto;
+    }
+}
+
+/* Enhanced touch feedback for better mobile experience */
+@media (hover: none) and (pointer: coarse) {
+    /* Add a subtle pulse effect on touch */
+    .cocurricular__photo-item:active,
+    .cocurricular__photo-container img:active,
+    .cocurricular__photo-grid img:active,
+    .cocurricular__photo-glow img:active {
+        animation: touchPulse 0.3s ease-out;
+    }
+}
+
+@keyframes touchPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.15);
     }
 }
 
