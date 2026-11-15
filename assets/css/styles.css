@@ -444,7 +444,11 @@ img{
 .skills__container{
     row-gap: 0;
 }
-
+.skills__plain {
+    font-size: var(--small-font-size);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
 .skills__header{
     display: flex;
     align-items: center;
