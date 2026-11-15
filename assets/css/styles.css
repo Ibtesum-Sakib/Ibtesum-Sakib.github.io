@@ -447,6 +447,7 @@ img{
 .skills__plain {
     font-size: var(--small-font-size);
     line-height: 1.6;
+    
     margin-bottom: 0.5rem;
 }
 .skills__header{
